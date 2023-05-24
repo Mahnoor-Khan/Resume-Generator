@@ -20,8 +20,8 @@ const SelectTemplate = ({ data }) => {
       <div ref={resumeRef}>
         <div className="upper-heading">
           <div className="name-div">
-            <h1 className="name-heading">{data?.name}</h1>
-            <h4 className="profession-heading">{data?.profession}</h4>
+            {data?.name && <h1 className="name-heading">{(data?.name).toUpperCase()}</h1>}
+            {data.profession && <h4 className="profession-heading">{(data?.profession).toUpperCase()}</h4>}
           </div>
           <div className="contact-div">
             {" "}
@@ -29,24 +29,24 @@ const SelectTemplate = ({ data }) => {
               <div>
                 <p className="heading-2">Contact Info</p>
               </div>
-              <div>
+              {data?.address && <div>
                 <i className="icons">
                   <EnvironmentFilled />
                 </i>{" "}
                 <span className="profile-text">{data?.address}</span>
-              </div>
-              <div>
+              </div>}
+              {data?.phone && <div>
                 <i className="icons">
                   <PhoneFilled />
                 </i>
                 <span className="profile-text">{data?.phone}</span>
-              </div>
-              <div>
+              </div>}
+              {data?.email && <div>
                 <i className="icons">
                   <MailFilled />{" "}
                 </i>
                 <span className="profile-text">{data?.email}</span>
-              </div>
+              </div>}
             </div>
           </div>
         </div>
@@ -107,7 +107,7 @@ const SelectTemplate = ({ data }) => {
                           key={index}
                           title={
                             <>
-                              <h2 className="resume-text">{item?.institute}</h2>
+                              <h2 className="resume-text">{(item?.institute).toUpperCase()}</h2>
                             </>
                           }
                           description={
@@ -160,10 +160,10 @@ const SelectTemplate = ({ data }) => {
                     >
                       {data?.education?.map((item, index) => (
                         <Step
-                          key={index}
+                          key={index}Se
                           title={
                             <>
-                              <h2 className="resume-text">{item?.institute}</h2>
+                              <h2 className="resume-text">{(item?.institute).toUpperCase()}</h2>
                             </>
                           }
                           description={

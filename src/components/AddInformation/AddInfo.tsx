@@ -45,66 +45,48 @@ const AddInfo = () => {
         <div className="form-col">
           <Form className="form" onFinish={handleSubmit}>
             <label>Name</label>
-            <span className="asteric">*</span>
             <br />
             <Form.Item
               label=""
               style={{ marginBottom: 0 }}
               name="name"
-              rules={[
-                { required: true, message: "Please input your username!" },
-              ]}
             >
               <Input />
             </Form.Item>
             <br />
             <label>Profession</label>
-            <span className="asteric">*</span>
             <br />
             <Form.Item
               label=""
               name="profession"
-              rules={[
-                { required: true, message: "Please input your profession!" },
-              ]}
             >
               <Input />
             </Form.Item>
             <label>E-Mail</label>
-            <span className="asteric">*</span>
             <br />
             <Form.Item
               name="email"
-              rules={[{ required: true, message: "Please input your E-mail!" }]}
             >
-              <Input />
+              <Input type='email'/>
             </Form.Item>
             <label>Phone No.</label>
-            <span className="asteric">*</span>
             <br />
             <Form.Item
               name="phone"
-              rules={[
-                { required: true, message: "Please input your Phone no." },
-              ]}
             >
               <Input type="tel" />
             </Form.Item>
             <label>Address</label>
-            <span className="asteric">*</span>
             <br />
             <Form.Item
               name="address"
-              rules={[{ required: true, message: "Please input your Address" }]}
             >
               <TextArea />
             </Form.Item>
             <label>About</label>
-            <span className="asteric">*</span>
             <br />
             <Form.Item
               name="about"
-              rules={[{ required: true, message: "Please input your About" }]}
             >
               <TextArea />
             </Form.Item>
