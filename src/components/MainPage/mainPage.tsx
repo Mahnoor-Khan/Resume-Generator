@@ -1,5 +1,6 @@
 import React from 'react'
-import './style.css'
+// import './style.css'
+import '../style.css'
 import mainImg from '../../assets/main-img.png'
 import { Link } from "react-router-dom";
 

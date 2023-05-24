@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
-import "./style.css";
+// import "./style.css";
+import "../style.css";
 import {
   EnvironmentFilled,
   PhoneFilled,
@@ -160,7 +161,7 @@ const SelectTemplate = ({ data }) => {
                     >
                       {data?.education?.map((item, index) => (
                         <Step
-                          key={index}Se
+                          key={index}
                           title={
                             <>
                               <h2 className="resume-text">{(item?.institute).toUpperCase()}</h2>

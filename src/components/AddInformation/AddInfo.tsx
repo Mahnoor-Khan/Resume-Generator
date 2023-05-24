@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import { Button, Form, Input, DatePicker, Space, Modal } from "antd";
-import "./style.css";
+// import "./style.css";
+import "../style.css";
 import { MinusCircleOutlined, PlusOutlined } from "@ant-design/icons";
 import SelectTemplate from "../SelectTemplate/SelectTemplate.tsx";
 import html2pdf from "html2pdf.js";
@@ -40,7 +41,7 @@ const AddInfo = () => {
 
   return (
     <>
-      <h1 className="heading">Add Information</h1>
+      <h1 className="heading heading-info">Add Information</h1>
       <div className="info-main">
         <div className="form-col">
           <Form className="form" onFinish={handleSubmit}>
